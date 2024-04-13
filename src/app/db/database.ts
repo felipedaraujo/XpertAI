@@ -1,5 +1,7 @@
-import mongoose from 'mongoose';
+import mongoose from 'mongoose'
 
-const connectMongo = async () => mongoose.connect(process.env.NEXT_PUBLIC_MONGO_URI as string);
+const connectMongo = async () => {
+  await mongoose.connect(process.env.NEXT_PUBLIC_MONGO_URI as string)
+}
 
-export default connectMongo;
+export default connectMongo

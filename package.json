@@ -42,7 +42,7 @@
     "next": "^13.4.12",
     "next-auth": "^4.22.3",
     "next-redux-wrapper": "^8.1.0",
-    "openai": "^3.3.0",
+    "openai": "4.33.1",
     "path": "^0.12.7",
     "react": "18.2.0",
     "react-contenteditable": "^3.3.7",
@@ -68,6 +68,7 @@
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
     "@types/styled-components": "^5.1.26",
+    "encoding": "^0.1.13",
     "jest": "^29.6.2",
     "jest-environment-jsdom": "^29.6.2",
     "sass": "^1.64.1"
