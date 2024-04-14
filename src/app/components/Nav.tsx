@@ -52,7 +52,7 @@ export default function Nav() {
           </p>
           <p className={styles.nav__register}>
             <Link className={styles.link__style__white} href="/register">
-              Get XpertAI itU+2019s free
+              Try it free
             </Link>
           </p>
           <svg
@@ -105,7 +105,7 @@ export default function Nav() {
               </p>
               <p className={styles.nav__mobile__option}>
                 <Link className={styles.link__style__black} href="/for-work">
-                  For Work
+                  For Military
                 </Link>
               </p>
               <p className={styles.nav__mobile__option}>
@@ -113,7 +113,7 @@ export default function Nav() {
                   className={styles.link__style__black}
                   href="/for-education"
                 >
-                  For Education
+                  For Corporations
                 </Link>
               </p>
               <p className={styles.nav__mobile__option}>
@@ -126,7 +126,7 @@ export default function Nav() {
               </p>
               <p className={styles.nav__mobile__register}>
                 <Link className={styles.link__style__white} href="/register">
-                  Get Grammarly
+                  Try XpertAI
                 </Link>
               </p>
               <p className={styles.nav__mobile__login}>

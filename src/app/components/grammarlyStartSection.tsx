@@ -33,7 +33,7 @@ const GrammarlyStartSection: React.FC<GrammarlyStartSectionProps> = ({
               href="/register"
               style={{ textDecoration: 'none', color: 'white' }}
             >
-              Get XpertAI itU+2019s free
+              Get XpertAI Today
             </Link>
           </button>
           <button className={styles.start__left__login}>

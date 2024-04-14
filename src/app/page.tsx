@@ -36,7 +36,7 @@ function Home() {
                 href="/register"
                 style={{ textDecoration: 'none', color: 'white' }}
               >
-                Get Started
+                Try it for free
               </Link>
             </button>
             <button className={styles.home__left__login}>
@@ -73,9 +73,9 @@ function Home() {
       <div className={styles.home__work}>
         <h3 className={styles.home__work__heading}>Works Where You Do</h3>
         <p className={styles.home__work__info}>
-          Get suggestions from Grammarly while you write in desktop applications
-          and sites across the web—as you move between apps, social media,
-          documents, messages, and emails.
+          Get suggestions from XpertAI while you write military contracts in
+          real-time, ensuring accuracy, compliance, and precision every step of
+          the way.
         </p>
         <div className={styles.home__work__sections}>
           {HomeWorkList.map((section) => (
@@ -97,7 +97,7 @@ function Home() {
           <div>
             <h3 style={{ fontWeight: 'bold' }}>Beyond Grammar and Spelling</h3>
             <p style={{ fontSize: '1.1rem', margin: '1rem 0rem' }}>
-              From grammar and spelling to style and tone, GrammarlyU+2019s
+              From grammar and spelling to style and tone, Grammarly&apos;s
               suggestions are comprehensive, helping you communicate effectively
               and as you intend.
             </p>
@@ -115,7 +115,7 @@ function Home() {
               href="/register"
               style={{ textDecoration: 'none', color: 'white' }}
             >
-              Get Grammarly itU+2019s free
+              Try it for free
             </Link>
           </p>
         </div>
