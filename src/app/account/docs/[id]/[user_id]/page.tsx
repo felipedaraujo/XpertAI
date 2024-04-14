@@ -18,6 +18,8 @@ import { DocumentContext } from './context/DocumentContext'
 import { HandleTranslateText } from '@/app/helpers/TranslateText'
 import TranslateText from './components/TranslateText'
 import useAuth from '@/app/hooks/useAuth'
+import Select from 'react-select'
+import experts from './experts.json'
 
 interface DocsProps {
   params: {
@@ -25,6 +27,15 @@ interface DocsProps {
     user_id: string
   }
 }
+
+const parsedExperts = experts
+  .sort((a, b) => a.job.localeCompare(b.job))
+  .map((expert) => ({
+    id: expert.id,
+    value: expert.id,
+    label: expert.job,
+    description: expert.instructions,
+  }))
 
 const Doc: React.FC<DocsProps> = ({ params }) => {
   const { isLogged } = useAuth()
@@ -36,6 +47,14 @@ const Doc: React.FC<DocsProps> = ({ params }) => {
     undefined | string | Element,
     React.Dispatch<React.SetStateAction<undefined | string | Element>>
   ] = useState()
+  const [selectedExperts, setSelectedExperts] = useState<
+    {
+      id: string
+      description: string
+      value: string
+      label: string
+    }[]
+  >([parsedExperts[14], parsedExperts[13], parsedExperts[0]])
   const [textSuggest, setTextSuggest]: [
     undefined | string,
     React.Dispatch<React.SetStateAction<undefined | string>>
@@ -90,8 +109,20 @@ const Doc: React.FC<DocsProps> = ({ params }) => {
   }, [text, title, correct])
 
   const handleCorrection = (): void => {
+    const content = `
+    <contract>
+    ${text}
+    </contract>
+    <experts>
+    ${selectedExperts
+      .map(
+        (expert) => `Expert: ${expert.label} Description: ${expert.description}`
+      )
+      .join('')}
+    </experts>`
+
     HandleCheckText(
-      text as string,
+      content as string,
       document?.language as string,
       setTextSuggest,
       setCorrect,
@@ -127,6 +158,10 @@ const Doc: React.FC<DocsProps> = ({ params }) => {
 
   const handleDoubleClick = (): void => {
     setWordToCheck(window.getSelection()?.toString())
+  }
+
+  const onSelectedExpertsChange = (selected: any) => {
+    setSelectedExperts(selected)
   }
 
   if (isLoading && !document) return <Loading />
@@ -188,7 +223,16 @@ const Doc: React.FC<DocsProps> = ({ params }) => {
               className={styles.doc__document__text}
             />
           </div>
+
           <div className={styles.doc__suggestions}>
+            <h5 className={styles.doc__suggestions__title}>Select Experts</h5>
+            <Select
+              isMulti
+              options={parsedExperts}
+              defaultValue={selectedExperts}
+              onChange={onSelectedExpertsChange}
+              className={styles.doc__suggestions__select}
+            />
             <h5 className={styles.doc__suggestions__title}>All Suggestions</h5>
 
             <button
@@ -253,7 +297,7 @@ const Doc: React.FC<DocsProps> = ({ params }) => {
                     alt="correct"
                   />
                   <h5 className={styles.doc__suggestions__active__message}>
-                    No Correction Your Grammar is Good!
+                    No Feedback Your Contract is Good!
                   </h5>
                 </>
               ) : (

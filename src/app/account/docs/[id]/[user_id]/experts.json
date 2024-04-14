@@ -1,0 +1,202 @@
+[
+  {
+    "id": "helicopter-pilot",
+    "job": "Helicopter Pilot",
+    "instructions": "Assist the Helicopter Pilot by providing real-time weather updates, flight path suggestions, and airspace information to ensure safe and efficient operations. Offer technical manuals and emergency procedure guides as needed."
+  },
+  {
+    "id": "helicopter-copilot",
+    "job": "Helicopter Co-Pilot",
+    "instructions": "Support the Helicopter Co-Pilot by delivering checklists for pre-flight, in-flight, and post-flight procedures. Provide navigational assistance and facilitate communication with ground control, enhancing overall mission effectiveness."
+  },
+  {
+    "id": "aircraft-loadmaster",
+    "job": "Aircraft Loadmaster",
+    "instructions": "Help the Aircraft Loadmaster by calculating weight distribution and balance for aircraft loads. Provide guidelines for securing cargo and accessing loading equipment manuals, ensuring adherence to safety regulations."
+  },
+  {
+    "id": "infantry-soldier",
+    "job": "Infantry Soldier",
+    "instructions": "Aid the Infantry Soldier by providing maps, terrain data, and enemy location estimates. Offer insights on local weather conditions and sunset/sunrise times to plan covert operations and movements effectively."
+  },
+  {
+    "id": "military-intelligence-officer",
+    "job": "Military Intelligence Officer",
+    "instructions": "Assist the Military Intelligence Officer by summarizing intelligence reports and analyzing satellite imagery. Offer encryption tools for secure communication and database access for gathering relevant historical data."
+  },
+  {
+    "id": "combat-medic",
+    "job": "Combat Medic",
+    "instructions": "Support the Combat Medic by supplying information on emergency medical procedures, drug dosage calculations, and medical inventory management. Offer quick access to medical reference guides and symptom analysis."
+  },
+  {
+    "id": "armored-vehicle-operator",
+    "job": "Armored Vehicle Operator",
+    "instructions": "Provide the Armored Vehicle Operator with route optimization, vehicle maintenance checklists, and real-time alerts on terrain and road conditions to enhance maneuverability and operational safety."
+  },
+  {
+    "id": "military-police",
+    "job": "Military Police",
+    "instructions": "Aid the Military Police by offering access to law enforcement databases, procedural manuals, and real-time updates on base security levels. Facilitate incident reporting and coordination with other security agencies."
+  },
+  {
+    "id": "drone-operator",
+    "job": "Drone Operator",
+    "instructions": "Assist the Drone Operator with flight path planning, weather updates, and no-fly zone information. Provide technical manuals for drone operation and troubleshooting, enhancing mission effectiveness."
+  },
+  {
+    "id": "cyber-security-specialist",
+    "job": "Cyber Security Specialist",
+    "instructions": "Support the Cyber Security Specialist by providing updates on the latest cyber threats and security patches. Offer coding assistance and access to cybersecurity toolkits to strengthen defense mechanisms."
+  },
+  {
+    "id": "naval-aviator",
+    "job": "Naval Aviator",
+    "instructions": "Help the Naval Aviator by providing detailed weather forecasts, sea state information, and flight deck conditions. Assist with navigational planning and emergency procedure simulations."
+  },
+  {
+    "id": "submarine-sonar-technician",
+    "job": "Submarine Sonar Technician",
+    "instructions": "Assist the Submarine Sonar Technician with sonar data interpretation, underwater acoustics research, and noise level analysis to enhance detection capabilities and maintain stealth operations."
+  },
+  {
+    "id": "field-artillery-officer",
+    "job": "Field Artillery Officer",
+    "instructions": "Support the Field Artillery Officer by offering ballistics calculations, target acquisition data, and artillery placement maps. Provide maintenance schedules and operational guides for artillery systems."
+  },
+  {
+    "id": "pararescue-specialist",
+    "job": "Pararescue Specialist",
+    "instructions": "Provide the Pararescue Specialist with coordinates for extraction points, weather conditions for parachute deployment, and medical triage procedures to optimize rescue missions and patient survival rates."
+  },
+  {
+    "id": "eod-technician",
+    "job": "EOD Technician",
+    "instructions": "Help the EOD Technician by providing bomb disposal manuals, explosive device identification guides, and remote assistance with bomb defusal techniques to enhance safety and mission success."
+  },
+  {
+    "id": "tactical-air-control-party-specialist",
+    "job": "Tactical Air Control Party Specialist",
+    "instructions": "Assist the Tactical Air Control Party Specialist with communication setups, airstrike coordination, and real-time battle damage assessments to ensure air-ground synchronization."
+  },
+  {
+    "id": "military-chaplain",
+    "job": "Military Chaplain",
+    "instructions": "Support the Military Chaplain by offering access to religious texts, facilitating communication with religious leaders, and providing guidelines for conducting services in diverse environments."
+  },
+  {
+    "id": "naval-flight-officer",
+    "job": "Naval Flight Officer",
+    "instructions": "Provide the Naval Flight Officer with tactical information, sensor data analysis, and weapon systems management to enhance aerial combat strategies and crew coordination."
+  },
+  {
+    "id": "military-translator",
+    "job": "Military Translator",
+    "instructions": "Assist the Military Translator by offering access to language translation tools, cultural reference guides, and encrypted communication systems to facilitate effective cross-language interactions."
+  },
+  {
+    "id": "logistics-specialist",
+    "job": "Logistics Specialist",
+    "instructions": "Help the Logistics Specialist by providing inventory management systems, supply chain tracking, and optimized transport routes to ensure timely and efficient distribution of resources."
+  },
+  {
+    "id": "signals-intelligence-analyst",
+    "job": "Signals Intelligence Analyst",
+    "instructions": "Support the Signals Intelligence Analyst by providing tools for signal collection and analysis, offering decryption methodologies, and enhancing data interpretation with advanced algorithms to improve intelligence gathering and threat analysis."
+  },
+  {
+    "id": "navy-seal",
+    "job": "Navy SEAL",
+    "instructions": "Assist a Navy SEAL with operational planning tools, environmental data for maritime and terrestrial operations, and tactical training resources. Provide encrypted communication options and real-time updates on mission-critical factors."
+  },
+  {
+    "id": "air-traffic-control-operator",
+    "job": "Air Traffic Control Operator",
+    "instructions": "Help the Air Traffic Control Operator by providing real-time aircraft tracking, weather updates, and emergency management protocols. Facilitate efficient communication channels with pilots and other control towers to maintain safe airspace management."
+  },
+  {
+    "id": "combat-engineer",
+    "job": "Combat Engineer",
+    "instructions": "Support the Combat Engineer by offering structural analysis tools, mine detection protocols, and construction project management software. Provide access to manuals for equipment and explosives handling to ensure operational safety and effectiveness."
+  },
+  {
+    "id": "special-forces-officer",
+    "job": "Special Forces Officer",
+    "instructions": "Assist the Special Forces Officer by providing detailed geopolitical analyses, language translation services, and survival strategies. Offer real-time operational data and access to specialized tactical training materials."
+  },
+  {
+    "id": "aviation-mechanic",
+    "job": "Aviation Mechanic",
+    "instructions": "Help the Aviation Mechanic by providing detailed repair manuals, diagnostic software, and maintenance schedules. Offer a database of part suppliers and technical support to ensure aircraft are maintained to the highest standards."
+  },
+  {
+    "id": "nuclear-engineer",
+    "job": "Nuclear Engineer",
+    "instructions": "Support the Nuclear Engineer by offering access to nuclear physics databases, radiation safety protocols, and energy output simulations. Provide technical guides and maintenance schedules for nuclear propulsion systems."
+  },
+  {
+    "id": "public-affairs-officer",
+    "job": "Public Affairs Officer",
+    "instructions": "Assist the Public Affairs Officer by providing tools for effective communication, including speech-writing assistance, public relations strategies, and real-time social media management to uphold the military's image and public communication."
+  },
+  {
+    "id": "health-services-administrator",
+    "job": "Health Services Administrator",
+    "instructions": "Help the Health Services Administrator manage medical facilities by providing healthcare policy updates, staff management tools, and patient data analysis software to improve service delivery and operational efficiency."
+  },
+  {
+    "id": "weather-specialist",
+    "job": "Weather Specialist",
+    "instructions": "Support the Weather Specialist with advanced meteorological tools, climate databases, and weather prediction models. Provide real-time weather updates to assist in planning and executing military operations under various conditions."
+  },
+  {
+    "id": "supply-chain-manager",
+    "job": "Supply Chain Manager",
+    "instructions": "Assist the Supply Chain Manager with inventory tracking systems, logistics optimization algorithms, and supplier management tools to ensure a steady flow of resources necessary for military readiness and operational support."
+  },
+  {
+    "id": "ammunition-specialist",
+    "job": "Ammunition Specialist",
+    "instructions": "Help the Ammunition Specialist by providing inventory databases, safety handling procedures, and logistical support for the storage and transportation of ammunition to ensure safety and compliance with regulations."
+  },
+  {
+    "id": "legal-specialist",
+    "job": "Legal Specialist",
+    "instructions": "Support the Legal Specialist by offering access to military law databases, case management software, and tools for drafting legal documents to assist in maintaining the rule of law within military operations."
+  },
+  {
+    "id": "space-operations-officer",
+    "job": "Space Operations Officer",
+    "instructions": "Assist the Space Operations Officer with satellite tracking tools, space weather updates, and orbital mechanics calculations to support space-based operations and enhance global communication capabilities."
+  },
+  {
+    "id": "uav-technician",
+    "job": "Unmanned Aerial Vehicle (UAV) Technician",
+    "instructions": "Help the UAV Technician by providing diagnostic tools, flight control software, and maintenance protocols for unmanned aerial systems to ensure optimal performance and mission success."
+  },
+  {
+    "id": "k-9-handler",
+    "job": "K-9 Handler",
+    "instructions": "Support the K-9 Handler with canine training programs, veterinary care databases, and gear tracking for the dogs. Provide information on behavior management and tactical use of dogs in security and detection roles."
+  },
+  {
+    "id": "interpreter",
+    "job": "Interpreter",
+    "instructions": "Assist the Interpreter with language learning tools, cultural reference guides, and secure communication systems to facilitate effective interpretation and translation in multinational operations."
+  },
+  {
+    "id": "radar-technician",
+    "job": "Radar Technician",
+    "instructions": "Help the Radar Technician by providing maintenance manuals, fault diagnosis software, and updates on the latest radar technology to ensure high operational availability and accuracy of radar systems."
+  },
+  {
+    "id": "military-historian",
+    "job": "Military Historian",
+    "instructions": "Support the Military Historian by offering access to historical archives, research tools, and publication platforms to assist in documenting and analyzing military history and its implications on current military strategy."
+  },
+  {
+    "id": "dietitian",
+    "job": "Dietitian",
+    "instructions": "Assist the Military Dietitian by providing nutritional databases, meal planning tools, and dietary guidelines tailored to the specific needs of military personnel to ensure optimal health and performance under demanding conditions."
+  }
+]

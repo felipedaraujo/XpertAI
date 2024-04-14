@@ -41,16 +41,8 @@ export async function POST(req: Request) {
   ]
 
   const prompt = `Review the purchase contract below and provide feedback from military experts' point of view. Expert's feedback must flag potential issues and provide recommendations for improvement or approval. Group the feedback by expert's job title.
-  <purchase contract>
   ${text}
-  </purchase contract>
-  <experts>
-  ${experts
-    .map(
-      (expert) => `Expert: ${expert.job} Description: ${expert.instructions}`
-    )
-    .join('')}
-  </experts>`
+  `
 
   const user = await User.findOne({ _id: _id })
 
