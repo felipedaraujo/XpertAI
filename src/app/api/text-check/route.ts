@@ -13,6 +13,7 @@ export async function POST(req: Request) {
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_SECRET_KEY,
   })
+  const model = 'gpt-4-turbo'
 
   const prompt = `Review the purchase contract below and provide feedback from military experts' point of view. Expert's feedback must flag potential issues and provide recommendations for improvement or approval. Group the feedback by expert's job title.
   ${text}
@@ -29,7 +30,7 @@ export async function POST(req: Request) {
         )
 
         const responseGrammar = await openai.chat.completions.create({
-          model: 'gpt-3.5-turbo',
+          model,
           messages: [
             {
               role: 'system',
@@ -77,7 +78,7 @@ export async function POST(req: Request) {
           { prompts: user.prompts + 1 }
         )
         const responseGrammar = await openai.chat.completions.create({
-          model: 'gpt-3.5-turbo',
+          model,
           messages: [
             {
               role: 'system',
@@ -129,7 +130,7 @@ export async function POST(req: Request) {
         )
 
         const responseGrammar = await openai.chat.completions.create({
-          model: 'gpt-3.5-turbo',
+          model,
           messages: [
             {
               role: 'system',
