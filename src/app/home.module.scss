@@ -10,7 +10,7 @@ $mobile: global.$mobile;
 
 .home__main {
   display: flex;
-  padding: 10rem 5rem;
+  padding: 10rem 5rem 5rem;
   align-items: center;
   justify-content: center;
   margin: 3% 0 0 0;
@@ -171,8 +171,8 @@ $mobile: global.$mobile;
         text-align: center;
       }
       .home__work__section__icon {
-        width: 56px;
-        height: 56px;
+        width: 75px;
+        height: 75px;
         border-radius: 0.5rem;
         background-color: white;
         -webkit-box-shadow: 0px 0px 17px -10px white;
