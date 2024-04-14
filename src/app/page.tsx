@@ -101,7 +101,7 @@ function Home() {
           <div>
             <h3 style={{ fontWeight: 'bold' }}>Beyond Basic Analysis</h3>
             <p style={{ fontSize: '1.1rem', margin: '1rem 0rem' }}>
-              From contract language to compliance and precision, XpertAI's
+              From contract language to compliance and precision, XpertAI&apos;s
               expertise provides comprehensive insights, ensuring your military
               contracts are communicated effectively and accurately.
             </p>
