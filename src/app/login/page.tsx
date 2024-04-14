@@ -29,7 +29,7 @@ const Login: React.FC = () => {
           <div className={styles.register__main__form__header}>
             <h3 style={{ fontWeight: 'bold' }}>Sign in</h3>
             <p>
-              <Link href="/register">I donU+2019t have an account</Link>
+              <Link href="/register">I don&apos;t have an account</Link>
             </p>
           </div>
           <input
