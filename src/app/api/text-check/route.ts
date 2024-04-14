@@ -26,7 +26,7 @@ export async function POST(req: Request) {
           { prompts: user.prompts + 1 }
         )
 
-        const responseGrammar = await openai.createChatCompletion({
+        const responseGrammar = await openai.chat.completions.create({
           model: 'gpt-3.5-turbo',
           messages: [
             {
@@ -44,18 +44,18 @@ export async function POST(req: Request) {
           frequency_penalty: 0,
           presence_penalty: 0,
         })
-        if (responseGrammar.data.choices[0].message?.content == text) {
+        if (responseGrammar.choices[0].message?.content == text) {
           return NextResponse.json({
             success: {
               correct: true,
-              text: responseGrammar.data.choices[0].message?.content,
+              text: responseGrammar.choices[0].message?.content,
             },
           })
         } else {
           return NextResponse.json({
             success: {
               correct: false,
-              text: responseGrammar.data.choices[0].message?.content,
+              text: responseGrammar.choices[0].message?.content,
             },
           })
         }
@@ -127,7 +127,7 @@ export async function POST(req: Request) {
           { prompts: user.prompts + 1 }
         )
 
-        const responseGrammar = await openai.createChatCompletion({
+        const responseGrammar = await openai.chat.completions.create({
           model: 'gpt-3.5-turbo',
           messages: [
             {
@@ -146,18 +146,18 @@ export async function POST(req: Request) {
           presence_penalty: 0,
         })
 
-        if (responseGrammar.data.choices[0].message?.content == text) {
+        if (responseGrammar.choices[0].message?.content == text) {
           return NextResponse.json({
             success: {
               correct: true,
-              text: responseGrammar.data.choices[0].message?.content,
+              text: responseGrammar.choices[0].message?.content,
             },
           })
         } else {
           return NextResponse.json({
             success: {
               correct: false,
-              text: responseGrammar.data.choices[0].message?.content,
+              text: responseGrammar.choices[0].message?.content,
             },
           })
         }

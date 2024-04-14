@@ -22,7 +22,7 @@ export async function POST(req : Request) {
       if (user.prompts<=1000){
         if (word){
           await User.findByIdAndUpdate({_id:_id},{prompts: user.prompts+1})
-          const responseGrammar = await openai.createChatCompletion({
+          const responseGrammar = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
             messages: [
               {
@@ -40,7 +40,7 @@ export async function POST(req : Request) {
             frequency_penalty: 0,
             presence_penalty: 0,
           });
-            return NextResponse.json({success:{words: responseGrammar.data.choices[0].message?.content}})
+            return NextResponse.json({success:{words: responseGrammar.choices[0].message?.content}})
         }
         else{
           return NextResponse.json({error: 'No content'})
@@ -54,7 +54,7 @@ export async function POST(req : Request) {
       if (user.prompts<=10000){
         if (word){
           await User.findByIdAndUpdate({_id:_id},{prompts: user.prompts+1})
-          const responseGrammar = await openai.createChatCompletion({
+          const responseGrammar = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
             messages: [
               {
@@ -72,7 +72,7 @@ export async function POST(req : Request) {
             frequency_penalty: 0,
             presence_penalty: 0,
           });
-            return NextResponse.json({success:{words: responseGrammar.data.choices[0].message?.content}})
+            return NextResponse.json({success:{words: responseGrammar.choices[0].message?.content}})
         }
         else{
           return NextResponse.json({error: 'No content'})
@@ -86,7 +86,7 @@ export async function POST(req : Request) {
       if (user.prompts<=20000){
         if (word){
           await User.findByIdAndUpdate({_id:_id},{prompts: user.prompts+1})
-          const responseGrammar = await openai.createChatCompletion({
+          const responseGrammar = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
             messages: [
               {
@@ -104,7 +104,7 @@ export async function POST(req : Request) {
             frequency_penalty: 0,
             presence_penalty: 0,
           });
-            return NextResponse.json({success:{words: responseGrammar.data.choices[0].message?.content}})
+            return NextResponse.json({success:{words: responseGrammar.choices[0].message?.content}})
         }
         else{
           return NextResponse.json({error: 'No content'})
