@@ -8,7 +8,6 @@ export const HandleCheckText = (
   setLoading: React.Dispatch<React.SetStateAction<boolean>>,
   _id: string
 ) => {
-  console.log('will call text check')
   setLoading(true)
 
   axios
@@ -18,8 +17,6 @@ export const HandleCheckText = (
       _id: _id,
     })
     .then(({ data }) => {
-      console.log('called text check', data)
-
       setLoading(false)
 
       if (data.error) {

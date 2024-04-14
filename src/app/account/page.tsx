@@ -17,8 +17,6 @@ const Account: React.FC = () => {
   const [filterInput, setFilterInput] = useState<string>('')
   const [filterData, setFilterData] = useState<any>()
 
-  console.log('data', data)
-
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>): void => {
     HandleSearchDocument(data?._id as string, e.target.value, setFilterData)
     setFilterInput(e.target.value)

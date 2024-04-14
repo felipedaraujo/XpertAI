@@ -9,13 +9,14 @@ $boxShadowColor: rgb(207, 207, 207);
 }
 
 @mixin btn($bgColor, $color) {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   background-color: $bgColor;
   border: none;
   color: $color;
   border-radius: 0.5rem;
   margin: 0.2rem 0.5rem 0 0;
 }
+
 .doc {
   width: 100%;
   display: flex;
@@ -91,7 +92,21 @@ $boxShadowColor: rgb(207, 207, 207);
       font-weight: bold;
     }
     .doc__suggestions__btn {
+      display: inline-flex;
+      align-items: center;
+      vertical-align: middle;
       @include btn(rgb(3, 190, 223), white);
+
+      &:disabled {
+        @include btn(rgb(207, 207, 207), white);
+      }
+
+      svg {
+        fill: white;
+        width: 18px;
+        height: 18px;
+        margin-right: 0.5rem;
+      }
     }
     .doc__suggestions__btn__red {
       @include btn(rgb(231, 27, 27), white);
