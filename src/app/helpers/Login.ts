@@ -1,19 +1,30 @@
-import axios from 'axios';
-import React from 'react';
+import axios from 'axios'
+import React from 'react'
 
-export const HandleLogin = (password: string,email: string,errorServer:React.Dispatch<React.SetStateAction<string>>)=>{
-    axios.post('/api/login',{
-        password: password,
-        email: email,
-    }).then(({data})=>{
-        if (data.error){
-            errorServer(data.error)
-            console.log(data)
-        }
-        else{
-            console.log('login')
-            console.log(data)
-            window.location.href='/account'
-        }
-    }).catch(err=>console.log(err))
+export const HandleLogin = (
+  password: string,
+  email: string,
+  errorServer: React.Dispatch<React.SetStateAction<string>>
+) => {
+  console.log('Will Login')
+  axios
+    .post('/api/login', { password, email })
+    .then((response) => {
+      console.log(JSON.stringify(response))
+      // log headers
+      console.log(JSON.stringify(response.headers))
+
+      const { data } = response
+      if (data.error) {
+        errorServer(data.error)
+        console.log(data)
+      } else {
+        console.log(data)
+        window.location.href = '/account'
+      }
+    })
+    .catch((err) => {
+      console.log('Login Error:')
+      console.error(err)
+    })
 }

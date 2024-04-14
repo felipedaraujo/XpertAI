@@ -30,6 +30,8 @@ const Account: React.FC = () => {
     return <Loading />
   }
 
+  console.log({ data })
+
   if (isLogged && data) {
     return (
       <div className={styles.account}>

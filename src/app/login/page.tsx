@@ -14,6 +14,7 @@ const Login: React.FC = () => {
     e: React.MouseEvent<HTMLInputElement, MouseEvent>
   ): void => {
     e.preventDefault()
+
     if (!validator.isEmpty(email) && !validator.isEmpty(password)) {
       HandleLogin(password, email, setErrorServer)
     } else {

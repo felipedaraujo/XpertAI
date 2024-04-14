@@ -7,11 +7,9 @@ export interface UserRequest extends NextRequest {
 }
 
 export async function middleware(req: UserRequest) {
-  console.log('middleware')
-
   const token = req.cookies.get('token')
 
-  //   console.log('token', token)
+  console.log('Middleware', { token })
 
   try {
     if (!token) {
