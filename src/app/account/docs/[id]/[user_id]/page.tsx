@@ -50,9 +50,9 @@ const Doc: React.FC<DocsProps> = ({ params }) => {
   const [selectedExperts, setSelectedExperts] = useState<
     {
       id: string
-      description: string
       value: string
       label: string
+      description: string
     }[]
   >([parsedExperts[14], parsedExperts[13], parsedExperts[0]])
   const [textSuggest, setTextSuggest]: [

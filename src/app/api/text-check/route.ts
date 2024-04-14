@@ -7,38 +7,12 @@ interface TextCheckRequests {
   language: string
   _id: string
 }
-interface Expert {
-  id: string
-  job: string
-  instructions: string
-}
 
 export async function POST(req: Request) {
   const { text, language, _id }: TextCheckRequests = await req.json()
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_SECRET_KEY,
   })
-
-  const experts: Expert[] = [
-    {
-      id: 'helicopter-pilot',
-      job: 'Helicopter Pilot',
-      instructions:
-        'Assist the Helicopter Pilot by providing real-time weather updates, flight path suggestions, and airspace information to ensure safe and efficient operations. Offer technical manuals and emergency procedure guides as needed.',
-    },
-    {
-      id: 'helicopter-copilot',
-      job: 'Helicopter Co-Pilot',
-      instructions:
-        'Support the Helicopter Co-Pilot by delivering checklists for pre-flight, in-flight, and post-flight procedures. Provide navigational assistance and facilitate communication with ground control, enhancing overall mission effectiveness.',
-    },
-    {
-      id: 'aircraft-loadmaster',
-      job: 'Aircraft Loadmaster',
-      instructions:
-        'Help the Aircraft Loadmaster by calculating weight distribution and balance for aircraft loads. Provide guidelines for securing cargo and accessing loading equipment manuals, ensuring adherence to safety regulations.',
-    },
-  ]
 
   const prompt = `Review the purchase contract below and provide feedback from military experts' point of view. Expert's feedback must flag potential issues and provide recommendations for improvement or approval. Group the feedback by expert's job title.
   ${text}
