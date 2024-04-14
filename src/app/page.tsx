@@ -97,7 +97,7 @@ function Home() {
           <div>
             <h3 style={{ fontWeight: 'bold' }}>Beyond Grammar and Spelling</h3>
             <p style={{ fontSize: '1.1rem', margin: '1rem 0rem' }}>
-              From grammar and spelling to style and tone, Grammarly’s
+              From grammar and spelling to style and tone, GrammarlyU+2019s
               suggestions are comprehensive, helping you communicate effectively
               and as you intend.
             </p>
@@ -115,7 +115,7 @@ function Home() {
               href="/register"
               style={{ textDecoration: 'none', color: 'white' }}
             >
-              Get Grammarly it's free
+              Get Grammarly itU+2019s free
             </Link>
           </p>
         </div>

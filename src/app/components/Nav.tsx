@@ -52,7 +52,7 @@ export default function Nav() {
           </p>
           <p className={styles.nav__register}>
             <Link className={styles.link__style__white} href="/register">
-              Get XpertAI it's free
+              Get XpertAI itU+2019s free
             </Link>
           </p>
           <svg

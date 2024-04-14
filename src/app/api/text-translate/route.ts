@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import {Configuration, OpenAIApi} from "openai"
+import OpenAI from "openai"
 import User from "@/app/db/schema";
 
 interface TextCheckRequests {
@@ -10,10 +10,9 @@ interface TextCheckRequests {
 
 export async function POST(req : Request) {
     const {text,language,_id}:TextCheckRequests = await req.json()
-    const configuration = new Configuration({
+    const openai = new OpenAI({
       apiKey: process.env.OPENAI_SECRET_KEY,
     });
-    const openai = new OpenAIApi(configuration);
 
     const promptGrammar:string = `You will be provided with statements, Your task is to translate this sentence in html brackets to ${language} do not change html brackets`
     const user = await User.findOne({_id:_id})
