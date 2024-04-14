@@ -46,7 +46,7 @@ const ForWork: React.FC = () => {
         color={section.color}
       />
       <h3 className={styles.forwork__work__heading}>
-        Grammarly Works Where You Do
+        XpertAI Works Where You Do
       </h3>
       <p className={styles.forwork__work__info}>
         Put your best foot forward in every message and document you write.

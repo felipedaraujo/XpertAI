@@ -48,14 +48,14 @@ function Home() {
               </Link>
             </button>
           </div>
-          <p data-testid="policy" className={styles.home__left__policy}>
+          {/* <p data-testid="policy" className={styles.home__left__policy}>
             By signing up, you agree to the{' '}
             <Link href="/">Terms and Conditions</Link> and{' '}
             <Link href="/">Privacy Policy</Link>. California residents, see our{' '}
             <Link href="/">CA Privacy Notice.</Link>
-          </p>
+          </p> */}
         </div>
-        <div className={styles.home__main__right}>
+        {/* <div className={styles.home__main__right}>
           <video
             className={styles.home__main__right__video}
             autoPlay
@@ -68,7 +68,11 @@ function Home() {
               type="video/mp4"
             />
           </video>
-        </div>
+          <img
+            src="home-background.png"
+            className={styles.home__main__right__image}
+          />
+        </div> */}
       </div>
       <div className={styles.home__work}>
         <h3 className={styles.home__work__heading}>Works Where You Do</h3>
@@ -95,20 +99,20 @@ function Home() {
             />
           </video>
           <div>
-            <h3 style={{ fontWeight: 'bold' }}>Beyond Grammar and Spelling</h3>
+            <h3 style={{ fontWeight: 'bold' }}>Beyond Basic Analysis</h3>
             <p style={{ fontSize: '1.1rem', margin: '1rem 0rem' }}>
-              From grammar and spelling to style and tone, Grammarly&apos;s
-              suggestions are comprehensive, helping you communicate effectively
-              and as you intend.
+              From contract language to compliance and precision, XpertAI's
+              expertise provides comprehensive insights, ensuring your military
+              contracts are communicated effectively and accurately.
             </p>
           </div>
         </div>
         <div className={styles.home__work__end}>
           <h2 className={styles.home__work__heading}>
-            Brilliant Writing Awaits
+            Brilliant Contracting Awaits
           </h2>
           <p className={styles.home__work__info}>
-            Discover the power of confident communication with Grammarly Free.
+            Discover the power of confident contracting with XpertAI Free.
           </p>
           <p className={styles.home__work__btn}>
             <Link

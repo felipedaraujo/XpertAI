@@ -192,6 +192,21 @@ const Doc: React.FC<DocsProps> = ({ params }) => {
           </div>
           <div className={styles.doc__suggestions}>
             <h5 className={styles.doc__suggestions__title}>All Suggestions</h5>
+
+            <button
+              title="Double Click Word And Check"
+              onClick={handleSynonyms}
+              className={styles.doc__suggestions__btn}
+            >
+              Generate Contract
+            </button>
+            <button
+              title="Click To Translate Text To Your Selected Language"
+              onClick={handleTranslate}
+              className={styles.doc__suggestions__btn__green}
+            >
+              Generate Requirements
+            </button>
             <button
               title="Click To Check Grammar"
               onClick={handleCorrection}
@@ -199,20 +214,6 @@ const Doc: React.FC<DocsProps> = ({ params }) => {
             >
               Analyze Contract
             </button>
-            {/* <button
-              title="Double Click Word And Check"
-              onClick={handleSynonyms}
-              className={styles.doc__suggestions__btn}
-            >
-              Check Synonyms
-            </button>
-            <button
-              title="Click To Translate Text To Your Selected Language"
-              onClick={handleTranslate}
-              className={styles.doc__suggestions__btn__green}
-            >
-              Translate to Your Language
-            </button> */}
             <div className={styles.doc__suggestions__active}>
               {synonymsLoading ? (
                 <CircularProgress style={{ margin: '5rem auto 1rem auto' }} />

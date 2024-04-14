@@ -1,10 +1,13 @@
+$color: #5c8fbf;
 $boxShadowColor: rgb(207, 207, 207);
+
 @media print {
   @page {
     size: A4; /* Or any other page size you prefer */
     margin: 1cm; /* Adjust the margin value as needed */
   }
 }
+
 @mixin btn($bgColor, $color) {
   padding: 0.5rem;
   background-color: $bgColor;
@@ -95,6 +98,9 @@ $boxShadowColor: rgb(207, 207, 207);
     }
     .doc__suggestions__btn__green {
       @include btn(rgb(21, 224, 14), white);
+    }
+    .doc__suggestions__btn__primary {
+      @include btn($color, white);
     }
     .doc__suggestions__active {
       width: 100%;
