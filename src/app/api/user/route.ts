@@ -17,7 +17,9 @@ export async function GET(req: UserRequest) {
       token.value,
       new TextEncoder().encode(process.env.JWT_SECRET_TOKEN as string)
     )
+    console.log('Get user decode', { decode })
     const { _id }: string | any = decode.payload.user
+    console.log('Get user ID', { _id })
     const user = await User.findOne({ _id: _id })
     return NextResponse.json(user)
   } else {
