@@ -11,18 +11,26 @@ export interface UserRequest extends NextRequest {
 export async function GET(req: UserRequest) {
   const token = req.cookies.get('token')
   console.log({ token })
-  if (token) {
-    await connectMongo()
-    const decode = await jose.jwtVerify(
-      token.value,
-      new TextEncoder().encode(process.env.JWT_SECRET_TOKEN as string)
-    )
-    console.log('Get user decode', { decode })
-    const { _id }: string | any = decode.payload.user
-    console.log('Get user ID', { _id })
-    const user = await User.findOne({ _id: _id })
-    return NextResponse.json(user)
-  } else {
+
+  try {
+    if (token) {
+      console.log('WILL Connect to Mongo')
+      await connectMongo()
+      console.log('WILL Decode', process.env.JWT_SECRET_TOKEN)
+      const decode = await jose.jwtVerify(
+        token.value,
+        new TextEncoder().encode(process.env.JWT_SECRET_TOKEN as string)
+      )
+      console.log('Get user decode', { decode })
+      const { _id }: string | any = decode.payload.user
+      console.log('Get user ID', { _id })
+      const user = await User.findOne({ _id: _id })
+      return NextResponse.json(user)
+    } else {
+      return NextResponse.json({ error: 'Unauthorized' })
+    }
+  } catch (error) {
+    console.error(error)
     return NextResponse.json({ error: 'Unauthorized' })
   }
 }
