@@ -15,10 +15,14 @@ export async function middleware(req: UserRequest) {
     if (!token) {
       return NextResponse.json({ error: 'Unauthorized' })
     } else {
+      console.log('WILL Decode')
+      console.log('JWT_SECRET_TOKEN', process.env.JWT_SECRET_TOKEN)
       const decode = await jose.jwtVerify(
         token.value,
         new TextEncoder().encode(process.env.JWT_SECRET_TOKEN as string)
       )
+
+      console.log('Decode', decode)
 
       if (decode) {
         console.log('next')
@@ -28,6 +32,8 @@ export async function middleware(req: UserRequest) {
       }
     }
   } catch (error) {
+    console.log('Error', error)
+
     return NextResponse.json({ error: 'Unauthorized' })
   }
 }
